@@ -77,8 +77,9 @@ if __name__ == '__main__':
     time, S, I, R = sir.simulate(T, dt)
     print(f"""
     RESULTS ON DAY {T}:
-    - Susceptible: {S[-1]}
-    - Infected: {I[-1]}
-    - Recovered: {R[-1]}
+    - Susceptible: {round(S[-1])}
+    - Infected: {round(I[-1])}
+    - Recovered: {round(R[-1])}
+    - Total Population: {round(S[-1] + I[-1] + R[-1])}
     """)
     sir.plot(time, S, I, R)
